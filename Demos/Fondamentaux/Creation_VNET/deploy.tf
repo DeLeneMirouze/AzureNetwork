@@ -14,7 +14,7 @@ module "vnet" {
   address_space       = ["10.3.0.0/16"]
 }
 
-module "subnet" {
+module "subnet1" {
   source               = "../../../modules/subnets"
   resource_group_name  = module.resourcesGroup.name
   vnet_name            = module.vnet.vnet_name
@@ -22,20 +22,44 @@ module "subnet" {
   subnet_address_space = ["10.3.1.0/24"]
 }
 
-module "nic" {
+module "nic1" {
   source              = "../../../modules/network_interface"
   resource_group_name = module.resourcesGroup.name
   location            = module.resourcesGroup.location
   vm_nic              = "nic1"
-  subnet_id           = module.subnet.subnet_id
+  subnet_id           = module.subnet1.subnet_id
 }
 
-module "vm" {
+module "vm1" {
   source              = "../../../modules/vm"
   resource_group_name = module.resourcesGroup.name
   location            = module.resourcesGroup.location
   vm_name             = "vm1"
-  nic_id              = module.nic.id
+  nic_id              = module.nic1.id
 }
 
 
+
+module "subnet2" {
+  source               = "../../../modules/subnets"
+  resource_group_name  = module.resourcesGroup.name
+  vnet_name            = module.vnet.vnet_name
+  subnet_name          = "subnet1"
+  subnet_address_space = ["10.3.1.0/24"]
+}
+
+module "nic2" {
+  source              = "../../../modules/network_interface"
+  resource_group_name = module.resourcesGroup.name
+  location            = module.resourcesGroup.location
+  vm_nic              = "nic1"
+  subnet_id           = module.subnet2.subnet_id
+}
+
+module "vm2" {
+  source              = "../../../modules/vm"
+  resource_group_name = module.resourcesGroup.name
+  location            = module.resourcesGroup.location
+  vm_name             = "vm1"
+  nic_id              = module.nic2.id
+}
