@@ -17,3 +17,10 @@ variable "address_space" {
   description = "L'espace d'adressage du réseau virtuel"
   type        = list(string)
 }
+
+variable "subnets" {
+  type = list(object({
+    subnet_name          = string
+    subnet_address_space = string
+  }))
+}
