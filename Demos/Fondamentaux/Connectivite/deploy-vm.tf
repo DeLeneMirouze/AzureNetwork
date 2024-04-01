@@ -22,6 +22,7 @@ module "vm" {
   location            = module.resourcesGroup.location
   vm_name             = var.vms[count.index].vm_name
   nic_id              = module.nic[count.index].id
+  password            = var.vms[count.index].passeword
 }
 
 variable "vms" {
@@ -30,6 +31,7 @@ variable "vms" {
     nic_name    = string
     subnet_name = string
     vnet_name   = string
+    passeword   = string
   }))
 }
 

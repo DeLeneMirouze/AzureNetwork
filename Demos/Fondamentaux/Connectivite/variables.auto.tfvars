@@ -38,18 +38,21 @@ vms = [
     nic_name    = "nic1"
     vnet_name   = "vnet1"
     subnet_name = "subnet1"
+    passeword   = "P@$$w0rd1234!"
   },
   {
     vm_name     = "VM2"
     nic_name    = "nic2"
     vnet_name   = "vnet1"
     subnet_name = "subnet2"
+    passeword   = "P@$$w0rd1234!"
   },
   {
     vm_name     = "VM3"
     nic_name    = "nic3"
     vnet_name   = "vnet2"
     subnet_name = "subnet1"
+    passeword   = "P@$$w0rd1234!"
     public_ip   = true
   }
 ]
