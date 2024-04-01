@@ -18,4 +18,10 @@ variable "subnet_id" {
   type        = string
 }
 
+variable "public_ip" {
+  type    = bool
+  default = false
+}
+
+
 
