@@ -5,7 +5,7 @@ module "nic" {
   resource_group_name = module.resourcesGroup.name
   location            = module.resourcesGroup.location
   vm_nic              = var.vms[count.index].nic_name
-  public_ip           = true
+  public_ip           = var.vms[count.index].public_ip
 
   subnet_id = flatten([
     for vnet in module.vnet : [
@@ -32,6 +32,7 @@ variable "vms" {
     subnet_name = string
     vnet_name   = string
     passeword   = string
+    public_ip   = bool
   }))
 }
 

@@ -19,7 +19,7 @@ variable "nic_id" {
 }
 
 variable "password" {
-  description = "Le mot de passe de l'administrateur"
+  description = "Le mot de passe de l'administrateur adminuser"
   type        = string
   default     = "P@$$w0rd1234!"
   sensitive   = true
