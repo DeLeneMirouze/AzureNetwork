@@ -39,7 +39,7 @@ vms = [
     vnet_name   = "vnet1"
     subnet_name = "subnet1"
     passeword   = "P@$$w0rd1234!"
-    public_ip   = false
+    public_ip   = true
   },
   {
     vm_name     = "VM2"
