@@ -32,7 +32,7 @@ resource "azurerm_virtual_machine_extension" "vm_extension_install_iis" {
 
   settings = <<SETTINGS
     {
-        "commandToExecute": "powershell -ExecutionPolicy Unrestricted Install-WindowsFeature -Name Web-Server -IncludeAllSubFeature -IncludeManagementTools"
+          "commandToExecute": "powershell Add-WindowsFeature Web-Server"
     }
 SETTINGS
 }
