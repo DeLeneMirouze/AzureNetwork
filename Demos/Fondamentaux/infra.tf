@@ -1,6 +1,6 @@
 
 module "resourcesGroup" {
-  source   = "../../../modules/resourcesGroup"
+  source   = "../../modules/resourcesGroup"
   rg_name  = var.resource_group_name
   location = var.location
 }
