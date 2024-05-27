@@ -13,3 +13,11 @@ variable "location" {
 variable "subnet_id" {
   type = string
 }
+
+variable "subnet_name" {
+  type = string
+}
+
+variable "vnet_name" {
+  type = string
+}
