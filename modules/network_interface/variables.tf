@@ -23,5 +23,9 @@ variable "public_ip" {
   default = false
 }
 
+variable "enable_ip_forwarding" {
+  type    = bool
+  default = false
+}
 
 

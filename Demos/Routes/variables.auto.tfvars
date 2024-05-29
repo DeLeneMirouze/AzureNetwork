@@ -36,7 +36,7 @@ vms = [
     vnet_name   = "vnetA"
     subnet_name = "subnetB"
     passeword   = "P@$$w0rd1234!"
-    public_ip   = false
+    public_ip   = true
   }
 ]
 
@@ -44,16 +44,11 @@ routes = {
   route_name = "myRouteTable"
   routes = [
     {
-      name           = "stopInternet"
-      address_prefix = "0.0.0.0/0"
-      next_hop_type  = "None"
+      name           = "myRoute"
+      address_prefix = "142.250.0.0/16"
+      next_hop_type  = "VirtualAppliance"
+      next_hop_in_ip = "10.3.2.4"
     }
   ]
-}
-
-lbs = {
-  name        = "lb1"
-  vnet_name   = "vnetA"
-  subnet_name = "subnetB"
 }
 
