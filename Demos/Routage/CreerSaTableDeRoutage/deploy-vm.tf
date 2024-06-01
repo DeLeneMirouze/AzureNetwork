@@ -1,7 +1,7 @@
 
 module "nic" {
   count               = length(var.vms)
-  source              = "../../modules/network_interface"
+  source              = "../../../modules/network_interface"
   resource_group_name = module.resourcesGroup.name
   location            = module.resourcesGroup.location
   vm_nic              = var.vms[count.index].nic_name
@@ -17,7 +17,7 @@ module "nic" {
 
 module "vm" {
   count               = length(var.vms)
-  source              = "../../modules/vm"
+  source              = "../../../modules/vm"
   resource_group_name = module.resourcesGroup.name
   location            = module.resourcesGroup.location
   vm_name             = var.vms[count.index].vm_name

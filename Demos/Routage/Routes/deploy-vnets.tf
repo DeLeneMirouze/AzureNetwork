@@ -1,6 +1,6 @@
 module "vnet" {
   count               = length(var.vnets)
-  source              = "../../modules/vnet"
+  source              = "../../../modules/vnet"
   resource_group_name = module.resourcesGroup.name
   location            = module.resourcesGroup.location
   vnet_name           = var.vnets[count.index].vnet_name
@@ -18,5 +18,4 @@ variable "vnets" {
     }))
   }))
 }
-
 

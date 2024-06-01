@@ -1,6 +1,6 @@
 module "routeTable" {
   count               = length(var.vnets)
-  source              = "../../modules/routeTable"
+  source              = "../../../modules/routeTable"
   resource_group_name = module.resourcesGroup.name
   location            = module.resourcesGroup.location
   route_name          = var.routes.route_name
