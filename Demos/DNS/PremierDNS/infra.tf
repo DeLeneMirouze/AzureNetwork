@@ -11,12 +11,6 @@ module "resourcesGroup2" {
   location = var.location
 }
 
-module "dns" {
-  source              = "../../../modules/dns"
-  dns_name            = "mydomain.com"
-  resource_group_name = module.resourcesGroup2.name
-}
-
 variable "resource_group_name" {
   type = string
 }
