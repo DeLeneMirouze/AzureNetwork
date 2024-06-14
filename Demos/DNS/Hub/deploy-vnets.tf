@@ -15,6 +15,22 @@ variable "vnets" {
     subnets = list(object({
       subnet_name          = string
       subnet_address_space = string
+      nsgs = optional(list(object({
+        nsg_name = string
+        rules = list(
+          object({
+            name                       = string
+            priority                   = number
+            direction                  = string
+            access                     = string
+            protocol                   = string
+            source_port_range          = optional(string, "*")
+            destination_port_range     = optional(string, "*")
+            source_address_prefix      = optional(string, "*")
+            destination_address_prefix = optional(string, "*")
+          })
+        )
+      })), [])
     }))
   }))
 }
