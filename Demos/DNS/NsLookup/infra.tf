@@ -1,14 +1,14 @@
 
 module "resourcesGroup" {
-  source   = "../../modules/resourcesGroup"
+  source   = "../../../modules/resourcesGroup"
   rg_name  = var.resource_group_name
   location = var.location
 }
 
 module "dns" {
-  source              = "../../modules/dns"
+  source              = "../../../modules/dns"
   dns_name            = "amethyste.com"
-  resource_group_name = module.resourcesGroup2.name
+  resource_group_name = module.resourcesGroup.name
 }
 
 variable "resource_group_name" {
