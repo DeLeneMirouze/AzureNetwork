@@ -12,7 +12,8 @@ variable "dns_name" {
 variable "dns_record" {
   description = "Liste de recordset type A"
   type = list(object({
-    name    = string
+    name   = string
     record = string
   }))
+  default = []
 }
