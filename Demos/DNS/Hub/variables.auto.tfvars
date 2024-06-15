@@ -15,20 +15,6 @@ vnets = [
       {
         subnet_name          = "subnetVM2"
         subnet_address_space = "10.1.2.0/24"
-        nsgs = [
-          {
-            nsg_name = "nsg1"
-            rules = [
-              {
-                name      = "ICMP-Allow"
-                priority  = 100
-                direction = "Inbound"
-                access    = "Allow"
-                protocol  = "Icmp"
-              }
-            ]
-          }
-        ]
       }
     ]
   },
@@ -82,18 +68,3 @@ vms = [
   }
 ]
 
-# nsg
-nsgs = [
-  {
-    nsg_name = "nsg1"
-    rules = [
-      {
-        name      = "ICMP-Allow"
-        priority  = 100
-        direction = "Inbound"
-        access    = "Allow"
-        protocol  = "Icmp"
-      }
-    ]
-  }
-]

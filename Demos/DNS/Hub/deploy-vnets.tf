@@ -35,4 +35,6 @@ variable "vnets" {
   }))
 }
 
-
+output "vnet" {
+  value = module.vnet
+}
