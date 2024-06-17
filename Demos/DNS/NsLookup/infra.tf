@@ -7,7 +7,7 @@ module "resourcesGroup" {
 
 module "dns" {
   source              = "../../../modules/dns"
-  dns_name            = "amethyste.com"
+  dns_name            = "amethyste-cours.com"
   resource_group_name = module.resourcesGroup.name
 }
 
