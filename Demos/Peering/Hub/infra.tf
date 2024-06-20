@@ -5,13 +5,13 @@ module "resourcesGroup" {
   location = var.location
 }
 
-module "dns" {
-  source              = "../../../modules/dns"
-  dns_name            = "mydomain.com"
-  resource_group_name = module.resourcesGroup.name
-  dns_record = [
-  ]
-}
+# module "dns" {
+#   source              = "../../../modules/dns"
+#   dns_name            = "mydomain.com"
+#   resource_group_name = module.resourcesGroup.name
+#   dns_record = [
+#   ]
+# }
 
 variable "resource_group_name" {
   type = string
