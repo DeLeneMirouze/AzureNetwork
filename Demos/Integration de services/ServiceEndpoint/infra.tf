@@ -19,5 +19,5 @@ module "storage" {
   storage_account_name = "amethystestor1"
   resource_group_name  = module.resourcesGroup.name
   location             = module.resourcesGroup.location
-  container_name       = ["containersubnet1A", "containersubnet2A", "containersubnet1B"]
+  container_name       = ["containersubnet1A"]
 }
