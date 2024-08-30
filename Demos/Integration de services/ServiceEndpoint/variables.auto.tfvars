@@ -38,16 +38,16 @@ vms = [
     vnet_name   = "vnetA"
     subnet_name = "subnet1A"
     passeword   = "P@$$w0rd1234!"
-    public_ip   = false
-  },
-  {
-    vm_name     = "VM2A"
-    nic_name    = "nic2"
-    vnet_name   = "vnetA"
-    subnet_name = "subnet2A"
-    passeword   = "P@$$w0rd1234!"
-    public_ip   = false
-  },
+    public_ip   = true
+  }
+  # {
+  #   vm_name     = "VM2A"
+  #   nic_name    = "nic2"
+  #   vnet_name   = "vnetA"
+  #   subnet_name = "subnet2A"
+  #   passeword   = "P@$$w0rd1234!"
+  #   public_ip   = false
+  # },
   # {
   #   vm_name     = "VM3B"
   #   nic_name    = "nic3"
