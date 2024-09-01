@@ -19,5 +19,6 @@ module "storage" {
   storage_account_name = "amethystestor1"
   resource_group_name  = module.resourcesGroup.name
   location             = module.resourcesGroup.location
-  container_name       = ["containersubnet1A"]
+  container_name       = ["fleurs"]
+  container_access_type = "container"
 }
