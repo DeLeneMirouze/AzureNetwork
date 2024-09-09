@@ -23,7 +23,7 @@ vms = [
     nic_name    = "nic1"
     vnet_name   = "vnetA"
     subnet_name = "subnet1A"
-    passeword   = "P@$$w0rd1234!"
+    passeword   = "P@$$w0rd1234!" # adminuser
     public_ip   = false
   }
 ]
