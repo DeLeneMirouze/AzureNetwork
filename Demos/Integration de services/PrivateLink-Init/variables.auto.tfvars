@@ -14,6 +14,16 @@ vnets = [
       }
     ]
   }
+  # , {
+  #   vnet_name          = "vnetB"
+  #   vnet_address_space = ["10.2.0.0/16"]
+  #   subnets = [
+  #     {
+  #       subnet_name          = "subnet1B"
+  #       subnet_address_space = "10.2.1.0/24"
+  #     }
+  #   ]
+  # }
 ]
 
 # VM
@@ -26,4 +36,13 @@ vms = [
     passeword   = "P@$$w0rd1234!" # adminuser
     public_ip   = false
   }
+
+  # ,  {
+  #   vm_name     = "VM1B"
+  #   nic_name    = "nic2"
+  #   vnet_name   = "vnetB"
+  #   subnet_name = "subnet1B"
+  #   passeword   = "P@$$w0rd1234!" # adminuser
+  #   public_ip   = false
+  # }
 ]
